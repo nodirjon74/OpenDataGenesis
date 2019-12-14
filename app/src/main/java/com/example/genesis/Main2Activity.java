@@ -1,6 +1,6 @@
 package com.example.genesis;
 
-import androidx.annotation.Nullable;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.core.app.ActivityCompat;
@@ -33,7 +33,7 @@ import me.dm7.barcodescanner.zbar.ZBarScannerView;
 
 public class Main2Activity extends AppCompatActivity {
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "Main2Activity";
     private String BASE_URL = "http://libgen.is/search.php?req=";
     private ArrayList<Book> bookList = new ArrayList<>();
     private RecyclerView recyclerView;
@@ -41,7 +41,7 @@ public class Main2Activity extends AppCompatActivity {
     boolean doubleBackToExitPressedOnce = false;
     private static int REQUEST_CODE=1;
     public ZBarScannerView mScannerView;
-    public boolean autosearch = true; //TODO: add switching (new Activity, along with menu of bookrefs)
+    public boolean autosearch = true; //TODO: add switching (new Activity, along with book_menu of bookrefs)
     public static final int PERMISSION_REQUEST_CAMERA = 1;
     // private ProgressBar progressBar;
     private SearchView searchView;

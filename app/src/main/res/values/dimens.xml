@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_margin">10dp</dimen>
+    <dimen name="card_album_radius">0dp</dimen>
+    <dimen name="title_size">16sp</dimen>
+    <dimen name="author_size">15sp</dimen>
+    <dimen name="appbar_padding_top" />
+    <dimen name="fab_margin" />
+</resources>

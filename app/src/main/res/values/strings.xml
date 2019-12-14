@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">Genesis</string>
+    <string name="author_name">Author Name</string>
+    <string name="book_title">Book Title</string>
+    <string name="file_extension">File Extension</string>
+    <string name="file_size">File Size</string>
+    <string name="download_icon">Download Icon</string>
+    <string name="pages">Pages</string>
+    <string name="language">Language</string>
+    <string name="year">Year</string>
+    <string name="share_link">Share Link</string>
+    <string name="download">Download</string>
+    <string name="share">Share</string>
+    <string name="overflow_button">Overflow Button</string>
+    <string name="tab_title_favorites" />
+    <string name="tab_title_home" />
+    <string name="action_favorite" />
+    <string name="action_settings" />
+    <string-array name="array">
+        <item>Scanner</item>
+        <item>University Resources</item>
+
+
+    </string-array>
+
+
 </resources>
