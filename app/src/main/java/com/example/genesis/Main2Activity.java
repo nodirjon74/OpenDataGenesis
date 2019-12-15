@@ -49,20 +49,13 @@ public class Main2Activity extends AppCompatActivity {
     private Button button;
 
 
-    //  private Spinner spn;
-    //private Toolbar tlb;
-
-
-
     protected void onCreate(Bundle savedInstanceState) {
         ActivityCompat.requestPermissions(this, new String[]{
                 Manifest.permission.WRITE_EXTERNAL_STORAGE
         }, REQUEST_CODE);
         super.onCreate(savedInstanceState);
-        //   tlb=(Toolbar)findViewById(R.id.activity_scan_barcode);
-        // setSupportActionBar(tlb);
-        setContentView(R.layout.activity_main);
-        //  spn=(Spinner)findViewById(R.id.spinner2);
+
+        setContentView(R.layout.activity_main2);
         fltb=(FloatingActionButton) findViewById(R.id.scanner);
         recyclerView = findViewById(R.id.book_recycler_view);
 
@@ -73,12 +66,6 @@ public class Main2Activity extends AppCompatActivity {
 
         booksAdapter = new BooksAdapter(this, bookList);
         recyclerView.setAdapter(booksAdapter);
-        //    progressBar = findViewById(R.id.progress_bar_cyclic);
-        //  progressBar.setVisibility(View.GONE);
-
-        // ArrayAdapter<CharSequence> myAdapter=ArrayAdapter.createFromResource(this,R.array.array,android.R.layout.simple_spinner_dropdown_item);
-        //  myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        spn.setAdapter(myAdapter);
         searchView = findViewById(R.id.search_view);
         searchView.setIconifiedByDefault(false);
         fltb.setOnClickListener(new View.OnClickListener() {
@@ -91,7 +78,7 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 searchView.clearFocus();
-//                progressBar.setVisibility(View.VISIBLE);
+
                 findBooks(query);
                 return true;
             }
@@ -108,8 +95,7 @@ public class Main2Activity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    // private void setSupportActionBar(Toolbar tlb) {
-    // }
+
 
     private void findBooks(final String query) {
         new Thread(new Runnable() {
@@ -140,8 +126,6 @@ public class Main2Activity extends AppCompatActivity {
                             book.setLanguage(bookElements.get(6).text());
                             book.setSize(bookElements.get(7).text());
                             book.setExtension(bookElements.get(8).text());
-
-                            //Replace the old code here with the new one that gets the MD5
                             book.setDownloadLink((bookElements.get(10).children()).get(0).attr("href"));
                             book.setDownloadLink(book.getDownloadLink().substring(book.getDownloadLink().lastIndexOf("=") + 1));
                             bookList.add(book);
@@ -154,7 +138,7 @@ public class Main2Activity extends AppCompatActivity {
                                 Toast.makeText(Main2Activity.this, "Nothing Found.", Toast.LENGTH_SHORT).show();
                             else {
                                 updateListView();
-                                //  progressBar.setVisibility(View.GONE);
+
                             }
                         }
                     });
